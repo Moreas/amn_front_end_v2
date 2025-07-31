@@ -15,8 +15,7 @@ import {
   MapPin,
   Headphones,
   TrendingUp,
-  Bell,
-  ChevronDown
+  Bell
 } from 'lucide-react';
 import Dashboard from './Dashboard';
 import AppointmentsPage from './AppointmentsPage';
@@ -29,22 +28,7 @@ function AppContent() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const getPageTitle = () => {
-    switch (location.pathname) {
-      case '/appointments':
-        return 'APPOINTMENTS';
-      case '/technicians':
-        return 'TECHNICIANS';
-      case '/clients':
-        return 'CLIENTS';
-      case '/payroll':
-        return 'PAYROLL';
-      case '/hiring':
-        return 'HIRING';
-      default:
-        return 'DASHBOARD';
-    }
-  };
+
 
   const getActiveMenu = () => {
     switch (location.pathname) {

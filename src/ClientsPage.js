@@ -4,7 +4,6 @@ import {
   ChevronDown,
   ChevronUp,
   Search,
-  Filter,
   Phone,
   Mail,
   MapPin

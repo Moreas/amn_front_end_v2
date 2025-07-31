@@ -1,8 +1,6 @@
 import React from 'react';
 import { 
-  Search, 
-  Plus,
-  ChevronDown
+  Plus
 } from 'lucide-react';
 
 // Sample appointment data for table
