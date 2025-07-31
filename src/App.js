@@ -23,6 +23,13 @@ import TechniciansPage from './TechniciansPage';
 import ClientsPage from './ClientsPage';
 import PayrollPage from './PayrollPage';
 import HiringPage from './HiringPage';
+import RequestsPage from './RequestsPage';
+import ServicesPage from './ServicesPage';
+import LocationsPage from './LocationsPage';
+import OutreachPage from './OutreachPage';
+import LeadsPage from './LeadsPage';
+import QualityPage from './QualityPage';
+import MetricsPage from './MetricsPage';
 
 function AppContent() {
   const location = useLocation();
@@ -42,6 +49,20 @@ function AppContent() {
         return 'payroll';
       case '/hiring':
         return 'hiring';
+      case '/requests':
+        return 'requests';
+      case '/services':
+        return 'services';
+      case '/locations':
+        return 'locations';
+      case '/outreach':
+        return 'outreach';
+      case '/leads':
+        return 'leads';
+      case '/quality':
+        return 'quality';
+      case '/metrics':
+        return 'metrics';
       default:
         return 'home';
     }
@@ -54,13 +75,13 @@ function AppContent() {
     { id: 'technicians', icon: Wrench, text: 'Technicians', path: '/technicians' },
     { id: 'payroll', icon: DollarSign, text: 'Payroll', path: '/payroll' },
     { id: 'hiring', icon: Plus, text: 'Hiring', path: '/hiring' },
-    { icon: HelpCircle, text: 'Requests' },
-    { icon: Mail, text: 'Outreach' },
-    { icon: Users, text: 'Leads' },
-    { icon: Folder, text: 'Services' },
-    { icon: MapPin, text: 'Locations' },
-    { icon: Headphones, text: 'Quality' },
-    { icon: TrendingUp, text: 'Metrics' }
+    { id: 'requests', icon: HelpCircle, text: 'Requests', path: '/requests' },
+    { id: 'outreach', icon: Mail, text: 'Outreach', path: '/outreach' },
+    { id: 'leads', icon: Users, text: 'Leads', path: '/leads' },
+    { id: 'services', icon: Folder, text: 'Services', path: '/services' },
+    { id: 'locations', icon: MapPin, text: 'Locations', path: '/locations' },
+    { id: 'quality', icon: Headphones, text: 'Quality', path: '/quality' },
+    { id: 'metrics', icon: TrendingUp, text: 'Metrics', path: '/metrics' }
   ];
 
   const activeMenu = getActiveMenu();
@@ -132,6 +153,13 @@ function AppContent() {
           <Route path="/clients" element={<ClientsPage />} />
           <Route path="/payroll" element={<PayrollPage />} />
           <Route path="/hiring" element={<HiringPage />} />
+          <Route path="/requests" element={<RequestsPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/locations" element={<LocationsPage />} />
+          <Route path="/outreach" element={<OutreachPage />} />
+          <Route path="/leads" element={<LeadsPage />} />
+          <Route path="/quality" element={<QualityPage />} />
+          <Route path="/metrics" element={<MetricsPage />} />
           <Route path="/" element={<Dashboard />} />
         </Routes>
       </div>
